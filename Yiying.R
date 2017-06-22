@@ -1,4 +1,4 @@
-##outliers
+##outliers###############################################
 install.packages("ggplot2")
 library(ggplot2)
 summary(default)
@@ -18,3 +18,11 @@ default$B_1[default$B_1>upper.bound]<-upper.bound
 summary(default$B_1)# now the max value of B_1 is the upper bond
 ## we can also do same thing to other variables
 
+##########################################################
+stem(default$AGE)##show max,min,and medium
+
+default$AGE[default$AGE>50]<-"Elder"
+default$AGE[default$AGE>=30 & default$AGE<=50]<-"Middle Age"
+default$AGE[default$AGE<30]<-"Young"
+default$AGE
+##########################################################
