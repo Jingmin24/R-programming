@@ -1,0 +1,4 @@
+df<-read.table("default of credit card clients.csv",T,stringsAsFactors = F,sep=",",skip=1)
+colnames(df)
+df[,c(3,4,5,7:12,25)] = lapply(df[,c(3,4,5,7:12,25)],as.factor)
+summary(df)
