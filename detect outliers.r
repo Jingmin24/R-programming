@@ -6,12 +6,12 @@ km=kmeans(Data,center=3)
 km$centers
 
 x1=matrix(km$centers[1,],nrow=30000, ncol =6 , byrow = T)  
-juli1=sqrt(rowSums((Data-x1)^2))  
+dist1=sqrt(rowSums((Data-x1)^2))  
 x2=matrix(km$centers[2,], nrow=30000, ncol =6 , byrow = T)  
-juli2=sqrt(rowSums((Data-x2)^2))  
+dist2=sqrt(rowSums((Data-x2)^2))  
 x3=matrix(km$centers[3,], nrow=30000, ncol =6 , byrow = T)  
-juli3=sqrt(rowSums((Data-x3)^2))  
-dist=data.frame(juli1,juli2,juli3)  
+dist3=sqrt(rowSums((Data-x3)^2))  
+dist=data.frame(dist1,dist2,dist3)  
 
 
 y=apply(dist, 1, min)  
