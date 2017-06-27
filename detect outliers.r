@@ -1,7 +1,7 @@
 ##use Euclidean distance to detect outliers and replace with NA###
 
 Data=scale(data.frame(df$BILL_AMT1,df$BILL_AMT2,df$BILL_AMT3,df$BILL_AMT4,df$BILL_AMT5,df$BILL_AMT6))
-set.seed(12)
+set.seed(123)
 km=kmeans(Data,center=3)  
 km$centers
 
