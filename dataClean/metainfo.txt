@@ -1,0 +1,15 @@
+Name of Quantlet: SPL_Datacleaning
+
+Published in: "Statistical programming languages- 
+
+Description: convert the categorical variables into "factor", detecting and handle outliers 
+
+Keywords: outliers, EuclideanDistance, cluster
+
+Author: Jingmin Zhang
+
+Datafile: default of credit card clients.csv
+
+Input: original dataset with 30000 observations and 25 variables
+
+Output: cleaned dataset with 29019 observations and 24 variables
