@@ -64,5 +64,8 @@ df[which(y > upper.limit),19:24] = NA
 
 #########delete the rows which we detect as Outliers i.e which have NA value#######
 clean.df=na.omit(df)
+clean.df<-clean.df[,-c(1)] #remove the variable "ID"
 
+###########clean dataset output########
+write.table(clean.df, "cleanCredit.csv", quote=F,col.names=T,row.names = FALSE)
 ####################################
