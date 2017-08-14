@@ -1,0 +1,13 @@
+Name of Quantlet: SPL_DataVisualization
+
+Published in: "Statistical programming languages- Student Project on "Using machine learning to predict default risk of credit card" 
+
+Description: Visualization the correlation of variables and difference in reponse variable
+
+Keywords: Visualization, correlation, ggplot2
+
+Author: Jingmin Zhang, Yiying Zhang
+
+Datafile: cleanCredit.csv
+
+Output: 3 plots of correlation and difference check in variables related to bill-statement and payment
