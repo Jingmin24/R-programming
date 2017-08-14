@@ -1,0 +1,15 @@
+Name of Quantlet: SPL_RandomForest
+
+Published in: "Statistical programming languages- Student Project on "Using machine learning to predict default risk of credit card" 
+
+Description: building Random forest model and evaluate the model by AUC and confusionmatrix, check the importance of variables.
+
+Keywords: Random forest, AUC, variable importance
+
+Author: Jingmin Zhang
+
+Datafile: dummyCredict.csv
+
+Input: dataset with transfered dummyvariables with 29107 observations
+
+Output: results of randomforest model, ROC curve and plot of variables' importance

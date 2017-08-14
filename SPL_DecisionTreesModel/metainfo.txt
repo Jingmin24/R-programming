@@ -1,0 +1,15 @@
+Name of Quantlet: SPL_DecisionTreesModel
+
+Published in: "Statistical programming languages- Student Project on "Using machine learning to predict default risk of credit card" 
+
+Description: building Decision Trees model based on "rpart" package and evaluate the model by AUC and confusionmatrix.
+
+Keywords: Decision Trees, AUC, rpart
+
+Author: Jingmin Zhang
+
+Datafile: dummyCredict.csv
+
+Input: dataset with transfered dummyvariables with 29107 observations
+
+Output: plot of decision trees and ROC curve
