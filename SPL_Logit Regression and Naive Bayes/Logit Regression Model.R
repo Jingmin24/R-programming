@@ -1,3 +1,7 @@
+
+
+library("lattice")
+library("ggplot2")
 library("caret")
 set.seed(224)
 idx.train <- createDataPartition(y = clean.df$default.payment.next.month, p = 0.8, list = FALSE) # Draw a random, stratified sample including p percent of the data
@@ -9,6 +13,7 @@ test_lr<-test
 train_lr[,(13:17)]<-NULL
 test_lr[,(13:17)]<-NULL
 
+##############building logit regression model##############################
 lr<-glm(default.payment.next.month~.,data=train_lr,family = binomial(link="logit"))
 summary(lr)
 pred.lr <- predict(lr, newdata = test_lr,type = "response")
