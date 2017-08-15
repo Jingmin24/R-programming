@@ -1,4 +1,4 @@
-
+clean.df<-read.csv("clean_data.csv",header=T)
 
 library("lattice")
 library("ggplot2")
