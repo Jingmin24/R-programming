@@ -1,17 +1,29 @@
+clean.df.1<-read.csv("clean_data.csv",header=T)
+
+set.seed(224)
+idx.train <- createDataPartition(y = clean.df$default.payment.next.month, p = 0.8, list = FALSE) # Draw a random, stratified sample including p percent of the data
+train <- clean.df[idx.train, ] # training set
+test <-  clean.df[-idx.train, ]
+
+
 library("e1071")
 if(!require("nnet")) install.packages("nnet"); library("nnet")
 if(!require("pROC")) install.packages("pROC"); library("pROC") 
 if(!require("caret")) install.packages("caret"); library("caret")
 
 df_nb<-naiveBayes(train$default.payment.next.month~.,data=train)
-summary(df_nb)
 pred.nb<-predict(df_nb,newdata = test,type = "raw")
 test$pred.nb<-pred.nb[,2]#probability of default(1=yes) is left，
-summary(test$pred.nb)
 test$pred.nb<-round(test$pred.nb,4)
 
+predictions.roc.nb<-data.frame(nb=pred.nb[,2])
+n.test.nb<-as.numeric(test$default.payment.next.month)
+h<-HMeasure(n.test.nb,predictions.roc.nb)
+plotROC(h,which = 1)
+h$metrics["AUC"]
+
 ##brier score#######################################################
-y<-as.numeric(test$default.payment.next.month)-1
+y<-as.numeric(test$default.payment.next.month)
 brier.nb<-sum((y-pred.nb)^2)/length(y)
 sprintf("Naive bayes has a brier score of %.5f",brier.nb)
 ##################################################################cross validation for NaiveBayes
