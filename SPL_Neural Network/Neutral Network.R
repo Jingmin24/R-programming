@@ -1,40 +1,20 @@
-model.control<- trainControl(method = "cv", 
-                             number = 5, 
-                             classProbs = TRUE,
-                             summaryFunction = twoClassSummary,
-                             allowParallel = TRUE, 
-                             returnData = FALSE)
-nn.parms <- expand.grid(decay = c(0, 10^seq(-3, 0, 1)), size = seq(3,15,2))
+clean.df.dumm1<-read.csv("clean_data_dumm.csv",header=T)
 
-nn <- caret::train(default.payment.next.month~., data = train.nn,  
-                   method = "nnet", maxit = 200, trace = FALSE, 
-                   tuneGrid = nn.parms, 
-                   metric = "ROC", trControl = model.control)
-plot(nn)
-yhat.nn<-predict(nn,newdata = test.nn,type = "prob")[,2]
-nn.roc<-roc(test.nn$default,yhat.nn)                               
-plot.roc(nn.roc)
+install.packages("RSNNS")
+install.packages("Rcpp")
+library("Rcpp")
+library("RSNNS")
 
-h<-HMeasure(true.class = as.numeric(test.nn$default)-1,scores = yhat.nn)
-h$metrics["AUC"]
-#0.7852288
+############################################################Building neural network model####################
+clean.df.dumm.c<-clean.df.dumm[sample(1:nrow(clean.df.dumm),length(1:nrow(clean.df.dumm))),1:ncol(clean.df.dumm)]
+Values<-clean.df.dumm.c[,c(1:13,15:90)]
+Targets<-decodeClassLabels(clean.df.dumm.c$default.payment.next.month)
 
-###cross validation for NN#########################################################
-k <- 5
-train.rnd.nn <- train.nn[sample(nrow(train.nn)),]
-folds <- cut(1:nrow(train.rnd.nn), breaks = k, labels = FALSE)
+clean.df.dumm.c<-splitForTrainingAndTest(Values,Targets,ratio = 0.2)##divede for two parts
+clean.df.dumm.c<-normTrainingAndTestSet(clean.df.dumm.c)
+model <- mlp(clean.df.dumm.c$inputsTrain, clean.df.dumm.c$targetsTrain, size=5, learnFuncParams=c(0.1), 
+              maxit=50, inputsTest=clean.df.dumm.c$inputsTest, targetsTest=clean.df.dumm.c$targetsTest)
+prediction.nn<-predict(model,clean.df.dumm.c$inputsTest)
 
-nnet.sizes <- seq(from = 3, to = 15, by = 3)
-results.nn<-as.data.frame(matrix(NA, ncol = length(nnet.sizes), nrow = k))
-for(n in 1:length(nnet.sizes)){
-  for (i in 1:k){
-    idx.val <- which(folds == i, arr.ind = TRUE)
-    cv.train <- train.rnd.nn[-idx.val,]
-    cv.val <- train.rnd.nn[idx.val,]
-    neuralnet <- nnet(default.payment.next.month~., data = cv.train, 
-                      trace = FALSE, maxit = 1000, 
-                      size = nnet.sizes[n],MaxNWts=1366)
-    yhat <- predict(neuralnet, newdata = cv.val, type = "raw")
-    results.nn[i, n] <- auc(cv.val$default.payment.next.month, as.vector(yhat))
-  }
-} 
+confusionMatrix(clean.df.dumm.c$targetsTest,prediction.nn)
+
