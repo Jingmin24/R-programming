@@ -24,7 +24,7 @@ head(pred.lr)
 
 if(!require("hmeasure"))install.packages("hmeasure");library("hmeasure")
 predictions.roc.lr<-data.frame(lr=pred.lr)
-n.test.lr<-as.numeric(test_lr$default.payment.next.month)-1
+n.test.lr<-as.numeric(test_lr$default.payment.next.month)
 h<-HMeasure(n.test.lr,predictions.roc.lr)
 plotROC(h,which = 1)
 h$metrics["AUC"]
