@@ -1,4 +1,4 @@
-clean.df.dumm1<-read.csv("clean_data_dumm.csv",header=T)
+clean.df.dumm<-read.csv("clean_data_dumm.csv",header=T)
 
 install.packages("RSNNS")
 install.packages("Rcpp")
