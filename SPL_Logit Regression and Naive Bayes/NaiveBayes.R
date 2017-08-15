@@ -1,4 +1,4 @@
-clean.df.1<-read.csv("clean_data.csv",header=T)
+clean.df<-read.csv("clean_data.csv",header=T)
 
 set.seed(224)
 idx.train <- createDataPartition(y = clean.df$default.payment.next.month, p = 0.8, list = FALSE) # Draw a random, stratified sample including p percent of the data
