@@ -16,5 +16,15 @@ model <- mlp(clean.df.dumm.c$inputsTrain, clean.df.dumm.c$targetsTrain, size=5, 
               maxit=50, inputsTest=clean.df.dumm.c$inputsTest, targetsTest=clean.df.dumm.c$targetsTest)
 prediction.nn<-predict(model,clean.df.dumm.c$inputsTest)
 
-confusionMatrix(clean.df.dumm.c$targetsTest,prediction.nn)
 
+##confusionMatrix is helpful to evaluated the model
+confusionMatrix(clean.df.dumm.c$targetsTest,prediction.nn)###accurancy can be conputed by a+d/a+b+c+d
+
+####################################################################ROC and AUC
+
+predictions.roc.nn<-data.frame(nn=prediction.nn[,2])
+x<-clean.df.dumm.c$targetsTest
+n.test<-as.numeric(x[,2])
+h<-HMeasure(n.test,predictions.roc.nn)
+plotROC(h,which = 1)
+h$metrics["AUC"]
