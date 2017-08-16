@@ -1,4 +1,4 @@
-clean.df<-read.csv("clean_data.csv",header=T)
+clean.df<-read.csv("cleanCredit.csv",header=T)
 
 clean.df.nn<-clean.df
 install.packages("dummies")
