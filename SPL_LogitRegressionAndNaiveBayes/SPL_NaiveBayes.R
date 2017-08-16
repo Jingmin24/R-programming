@@ -20,6 +20,9 @@ test$pred.nb<-round(test$pred.nb,4)
 auc.nb <- auc(test$default.payment.next.month, pred.nb[,2]) 
 plot.roc(test$default.payment.next.month, pred.nb[,2], print.auc=TRUE,col="blue")
 
+#######confusion matrix######################################
+confusionMatrix(pred.nb,test$default.payment.next.month)
+
 ##brier score#######################################################
 y<-as.numeric(test$default.payment.next.month)
 brier.nb<-sum((y-pred.nb)^2)/length(y)
