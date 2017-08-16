@@ -8,7 +8,7 @@ Keywords: Neural network, AUC,
 
 Author: Yiying Zhang
 
-Datafile: clean.df.dumm.csv
+Datafile: clean.data.dumm.csv
 
 Input: dataset with transfered dummyvariables with 29107 observations and 90 variables
 
