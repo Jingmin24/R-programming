@@ -8,26 +8,8 @@ Keywords: outliers, EuclideanDistance, cluster, dummy variale, standardize
 
 Author: Jingmin Zhang, Yiying Zhang
 
-Datafile: default of credit card clients.csv,clean_data.csv
+Datafile: default of credit card clients.csv
 
 Input: original dataset with 30000 observations and 25 variables
 
-Output: cleaned dataset with 29107 observations and 24 variables
-
-
-
-Name of Quantlet: SPL_Datapre-processing
-
-Published in: "Statistical programming languages- Student Project on "Using machine learning to predict default risk of credit card" 
-
-Description: covert factor variables into dummy variables and standardize numeric variables.
-
-Keywords: dummy variale, standardize
-
-Author:  Yiying Zhang
-
-Datafile: clean_data.csv
-
-Input: cleaned dataset with 29019 observations and 24 variables
-
-Output: dataset with 29019 observation and 90 variables
+Output: cleaned dataset with 29107 observations and 90 variables
