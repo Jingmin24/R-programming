@@ -1,0 +1,15 @@
+Name of Quantlet: SPL_Logit Regression and Naive Bayes
+
+Published in: "Statistical programming languages- Student Project on "Using machine learning to predict default risk of credit card" 
+
+Description: building Logit regression model and naive bayses model, evaluate models by AUC and confusionmatrix.
+
+Keywords: Logit Regression, Naive Bayes, AUC
+
+Author: Yiying Zhang
+
+Datafile: clean_data.csv
+
+Input: clean dataset with 29107 observations and 24 variables
+
+Output: ROC curve and AUC value
