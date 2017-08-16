@@ -2,7 +2,7 @@ if(!require("rpart")) install.packages("rpart"); library("rpart")
 if(!require("caret")) install.packages("caret"); library("caret") 
 if(!require("rpart.plot")) install.packages("rpart.plot"); library("rpart.plot")
 library(pROC)
-library(AUC)
+
 
 #read data
 clean.df<-read.csv("dummyCredict.csv")
