@@ -1,0 +1,15 @@
+Name of Quantlet: SPL_Neural Network
+
+Published in: "Statistical programming languages- Student Project on "Using machine learning to predict default risk of credit card" 
+
+Description: building Neural network model based on "RSNNS" package and evaluate the model by AUC and confusionmatrix.
+
+Keywords: Neural network, AUC, 
+
+Author: Yiying Zhang
+
+Datafile: clean.df.dumm.csv
+
+Input: dataset with transfered dummyvariables with 29107 observations and 90 variables
+
+Output: ROC curve, AUC and Accurancy value
