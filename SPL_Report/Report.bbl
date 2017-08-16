@@ -1,0 +1,94 @@
+\begin{thebibliography}{17}
+\newcommand{\enquote}[1]{``#1''}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[\protect\citeauthoryear{Archer and Kimes}{Archer and
+  Kimes}{2008}]{archer2008empirical}
+\textsc{Archer, K.~J. and R.~V. Kimes} (2008): \enquote{Empirical
+  characterization of random forest variable importance measures,}
+  \emph{Computational Statistics \& Data Analysis}, 52, 2249--2260.
+
+\bibitem[\protect\citeauthoryear{Bradley}{Bradley}{1997}]{bradley1997use}
+\textsc{Bradley, A.~P.} (1997): \enquote{The use of the area under the ROC
+  curve in the evaluation of machine learning algorithms,} \emph{Pattern
+  recognition}, 30, 1145--1159.
+
+\bibitem[\protect\citeauthoryear{Breiman}{Breiman}{2001}]{breiman2001random}
+\textsc{Breiman, L.} (2001): \enquote{Random forests,} \emph{Machine learning},
+  45, 5--32.
+
+\bibitem[\protect\citeauthoryear{Brun, Sima, Hua, Lowey, Carroll, Suh, and
+  Dougherty}{Brun et~al.}{2007}]{brun2007model}
+\textsc{Brun, M., C.~Sima, J.~Hua, J.~Lowey, B.~Carroll, E.~Suh, and E.~R.
+  Dougherty} (2007): \enquote{Model-based evaluation of clustering validation
+  measures,} \emph{Pattern recognition}, 40, 807--824.
+
+\bibitem[\protect\citeauthoryear{David W.~Hosmer}{David
+  W.~Hosmer}{2013}]{appliedlogit}
+\textsc{David W.~Hosmer, Jr., S. L. R. X.~S.} (2013): \emph{Applied Logistic
+  Regression, 3th Edition}, vol. 528, Wiley.
+
+\bibitem[\protect\citeauthoryear{DJ~Hand}{DJ~Hand}{1997}]{Hand97Henley}
+\textsc{DJ~Hand, W.~H.} (1997): \enquote{Statistical Classification Methods in
+  Consumer Credit Scoring: a Review,} \emph{Royal Statistical Society},
+  523--541.
+
+\bibitem[\protect\citeauthoryear{Gurney}{Gurney}{1997}]{NN97}
+\textsc{Gurney, K.} (1997): \emph{An Introduction to Neural Network}, London
+  UCL press.
+
+\bibitem[\protect\citeauthoryear{Hawkins}{Hawkins}{1980}]{hawkins1980identification}
+\textsc{Hawkins, D.~M.} (1980): \emph{Identification of outliers}, vol.~11,
+  Springer.
+
+\bibitem[\protect\citeauthoryear{I-Cheng~Yeh}{I-Cheng~Yeh}{2009}]{Cheng2009the}
+\textsc{I-Cheng~Yeh, C.-h.~L.} (2009): \enquote{The comparisons of data mining
+  techniques for the predictive accuracy of probability of default of credit
+  card clients,} \emph{Expert Systems with Applications}, 2473--2480.
+
+\bibitem[\protect\citeauthoryear{I.Rish}{I.Rish}{2001}]{Rishnb}
+\textsc{I.Rish} (2001): \enquote{An empirical study of the Naive Bayes
+  classifier,} \emph{International Journal of Forecasting}.
+
+\bibitem[\protect\citeauthoryear{KH~Chye}{KH~Chye}{2002}]{KH2002}
+\textsc{KH~Chye, C.~G.} (2002): \enquote{Data mining and customer relationship
+  marketing in the banking industry,} \emph{Singapore Management Review}.
+
+\bibitem[\protect\citeauthoryear{Loureiro, Torgo, and Soares}{Loureiro
+  et~al.}{2004}]{loureiro2004outlier}
+\textsc{Loureiro, A., L.~Torgo, and C.~Soares} (2004): \enquote{Outlier
+  detection using clustering methods: a data cleaning application,} in
+  \emph{Proceedings of KDNet Symposium on Knowledge-based Systems for the
+  Public Sector. Bonn, Germany}.
+
+\bibitem[\protect\citeauthoryear{MacQueen et~al.}{MacQueen
+  et~al.}{1967}]{macqueen1967some}
+\textsc{MacQueen, J. et~al.} (1967): \enquote{Some methods for classification
+  and analysis of multivariate observations,} in \emph{Proceedings of the fifth
+  Berkeley symposium on mathematical statistics and probability}, Oakland, CA,
+  USA., vol.~1, 281--297.
+
+\bibitem[\protect\citeauthoryear{Park, Goo, and Jo}{Park
+  et~al.}{2004}]{park2004receiver}
+\textsc{Park, S.~H., J.~M. Goo, and C.-H. Jo} (2004): \enquote{Receiver
+  operating characteristic (ROC) curve: practical review for radiologists,}
+  \emph{Korean Journal of Radiology}, 5, 11--18.
+
+\bibitem[\protect\citeauthoryear{Peters, Samson, and Verhoest}{Peters
+  et~al.}{2004}]{peters2004predictive}
+\textsc{Peters, J., R.~Samson, and N.~Verhoest} (2004): \enquote{Predictive
+  ecohydrological modelling using the random forest algorithm.}
+  \emph{Communications in agricultural and applied biological sciences}, 70,
+  207--211.
+
+\bibitem[\protect\citeauthoryear{Steinberg and Colla}{Steinberg and
+  Colla}{2009}]{steinberg2009cart}
+\textsc{Steinberg, D. and P.~Colla} (2009): \enquote{CART: classification and
+  regression trees,} \emph{The top ten algorithms in data mining}, 9, 179.
+
+\bibitem[\protect\citeauthoryear{Thomas}{Thomas}{2000}]{thomas2000}
+\textsc{Thomas, L.~C.} (2000): \enquote{A survey of credit and behavioral
+  scoring: Forecasting financial risk of lending to consumers,}
+  \emph{International Journal of Forecasting}, 149--172.
+
+\end{thebibliography}
