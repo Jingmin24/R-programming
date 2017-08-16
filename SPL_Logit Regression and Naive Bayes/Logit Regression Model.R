@@ -1,8 +1,10 @@
-clean.df<-read.csv("clean_data.csv",header=T)
+clean.df<-read.csv("clean_data.csv",header=T)##load the dataset
 
 library("lattice")
 library("ggplot2")
 library("caret")
+
+##diveding the dataset for two parts
 set.seed(224)
 idx.train <- createDataPartition(y = clean.df$default.payment.next.month, p = 0.8, list = FALSE) # Draw a random, stratified sample including p percent of the data
 train <- clean.df[idx.train, ] # training set
@@ -10,7 +12,7 @@ test <-  clean.df[-idx.train, ]
 
 train_lr<-train
 test_lr<-test
-train_lr[,(13:17)]<-NULL
+train_lr[,(13:17)]<-NULL ##delete variables have large correlation coefficients
 test_lr[,(13:17)]<-NULL
 
 ##############building logit regression model##############################
@@ -20,14 +22,9 @@ pred.lr <- predict(lr, newdata = test_lr,type = "response")
 round(coef(summary(lr)),4)
 head(pred.lr)
 
-#####################################################################auc
-
-if(!require("hmeasure"))install.packages("hmeasure");library("hmeasure")
-predictions.roc.lr<-data.frame(lr=pred.lr)
-n.test.lr<-as.numeric(test_lr$default.payment.next.month)-1
-h<-HMeasure(n.test.lr,predictions.roc.lr)
-plotROC(h,which = 1)
-h$metrics["AUC"]
+#####################################################################auc and ROC
+auc.lr<-auc(test_lr$default.payment.next.month,pred.lr)
+plot.roc(test_lr$default.payment.next.month,pred.lr,print.auc=TRUE,col="red")
 
 ######################################################################
 ###cross validation for Logit 
