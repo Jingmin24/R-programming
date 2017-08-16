@@ -1,14 +1,14 @@
-Name of Quantlet: SPL_DataCleaning
+Name of Quantlet: SPL_DataCleaning,SPL_
 
 Published in: "Statistical programming languages- Student Project on "Using machine learning to predict default risk of credit card" 
 
-Description: convert the categorical variables into "factor", detecting and handling outliers 
+Description: convert the categorical variables into "factor", detecting and handling outliers.
 
 Keywords: outliers, EuclideanDistance, cluster
 
-Author: Jingmin Zhang
+Author: Jingmin Zhang, Yiying Zhang
 
-Datafile: default of credit card clients.csv
+Datafile: default of credit card clients.csv,
 
 Input: original dataset with 30000 observations and 25 variables
 
